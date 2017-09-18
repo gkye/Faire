@@ -1,0 +1,24 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Faire' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Faire
+pod 'IBAnimatable'
+pod 'Hero'
+pod 'RealmSwift'
+pod 'Timepiece'
+
+  target 'FaireTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'FaireUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
