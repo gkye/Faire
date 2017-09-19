@@ -29,14 +29,17 @@ extension Date {
 
 	func toString(format: String = "MMM d, yyyy") -> String{
 
-		dump(getComponents(secondDate: self))
-
 		if self.isSameDay(as: Date()){
 			return "Today"
 		}
 
 		if self.isSameDay(as: Date.yesterday()){
-			return "Yesterda"
+			return "Yesterday"
+		}
+
+		let components = getComponents(secondDate: self)
+		if components.day ?? 0 < 4 {
+			return self.formatDateToString(format: "EEEE")
 		}
 
 		return self.formatDateToString(format: format)
@@ -45,9 +48,9 @@ extension Date {
 	func getComponents(secondDate: Date) -> DateComponents{
 		let calendar = Calendar.current
 		// Replace the hour (time) of both dates with 00:00
-		let date1 = calendar.startOfDay(for: Date())
-		let date2 = calendar.startOfDay(for: secondDate)
-		return  calendar.dateComponents([.day], from: date1, to: date2)
+		let date1 = calendar.startOfDay(for: secondDate)
+		let date2 = calendar.startOfDay(for: Date())
+		return  calendar.dateComponents([.day, .calendar], from: date1, to: date2)
 	}
 
 	public func formatDateToString(format: String) -> String{

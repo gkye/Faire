@@ -13,6 +13,9 @@ A flat design switch alternative to UISwitch
 */
 @IBDesignable open class AIFlatSwitch: UIControl {
 
+	//Strctly to keep track of FlatSwitch index within tableView
+	var indexPath: IndexPath!
+
 	/**
 	Animation duration for the whole selection transition
 	*/

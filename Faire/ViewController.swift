@@ -20,7 +20,7 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		collectionView.dataSource = self
 		collectionView.delegate = self
-		loadData()
+ 		loadData()
 	}
 
 	func loadData(){
@@ -34,11 +34,13 @@ class ViewController: UIViewController {
 	}
 
 	func createTestingData(){
-		TaskManager.createNewCategory(name: "Personal", icon: "playground")
-		let arr = ["Get some stuff buddy", "Charge your phone now!", "Shoot your shot"]
+//		TaskManager.createNewCategory(name: "Personal", icon: "playground")
+		let now = Date()
+
+		let arr = ["Fuck ya mum"]
 		let cat = TaskManager.getAllTasks()[0]
 		for i in arr {
-			let item = TaskItem.createItem(name: i, date: Date(), parentTask: cat)
+			let item = TaskItem.createItem(name: i, date: 3.weeks.ago!, parentTask: cat)
 			TaskManager.addNewTask(category: cat, taskItem: item)
 		}
 		let items = TaskManager.getAllTasks()

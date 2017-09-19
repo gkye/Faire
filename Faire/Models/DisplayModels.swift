@@ -23,22 +23,28 @@ struct TasksPreviewDisplayModel {
 
 	init(task: TaskCategory) {
 		self.title = task.name
-		totalTasks = task.tasks.map{$0.taskItems}.count
+		totalTasks = task.tasks.flatMap({$0.taskItems}).count
 		totalTasksString = "\(totalTasks!) Tasks"
 		icon = UIImage(named: task.icon)
 		taskCategory = task
 	}
 }
 
-
 struct TaskDisplayModel {
 
 	var dateString: String! = ""
-	var items: [TaskItemDisplayModel] = []
+	var items = [TaskItemDisplayModel]()
 
-	static func createModel(tasks: Task){
-		let abs = tasks.rawDate.toString()
-		print(abs)
+	static func createModel(tasks: Task) -> TaskDisplayModel {
+		var model = TaskDisplayModel()
+
+		model.dateString = tasks.rawDate.toString()
+		tasks.taskItems.forEach {
+			task in
+			let item = TaskItemDisplayModel(item: task)
+			model.items.append(item)
+		}
+		return model
 	}
 }
 
@@ -46,6 +52,10 @@ struct TaskDisplayModel {
 struct TaskItemDisplayModel {
 
 	var title: String!
-	var desc: String!
 	var item: TaskItem!
+
+	init(item: TaskItem){
+		title = item.name
+		self.item = item
+	}
 }

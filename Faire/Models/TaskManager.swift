@@ -51,6 +51,15 @@ struct TaskManager {
 			}
 		}
 	}
+
+	//
+	static func toggleTaskCompletionStatus(task: TaskItem){
+		let realm = try! Realm()
+		try! realm.write {
+			//Toggle current status
+			task.isCompleted = !task.isCompleted
+		}
+	}
 	
 }
 
