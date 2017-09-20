@@ -87,15 +87,26 @@ extension AddTaskViewController: UITextFieldDelegate {
 		toggleDoneBtn()
 	}
 
-	func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 		toggleDoneBtn()
+		return true
 	}
 
+	func textFieldDidBeginEditing(_ textField: UITextField) {
+		toggleDoneBtn()
+	}
+	
 	func toggleDoneBtn(){
-		if taskTitleTextField.text == nil{
-			addTaskBtn.isEnabled = true
-		}else{
+		guard let txt = taskTitleTextField.text else{
 			addTaskBtn.isEnabled = false
+			return
+		}
+		if txt.isEmpty{
+			addTaskBtn.isEnabled = false
+		}else{
+			addTaskBtn.isEnabled = true
 		}
 	}
+
+
 }

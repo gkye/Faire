@@ -20,10 +20,15 @@ class TaskViewerViewController: UITableViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		loadData()
 		let addTaskBtn = UIBarButtonItem(image: #imageLiteral(resourceName: "add"), style: .done, target: self, action: #selector(didTapAddNewTask))
 		addTaskBtn.tintColor = .black
 		navigationItem.rightBarButtonItem = addTaskBtn
+	}
+
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		//REMINDME: Replace with notifcation later?
+		loadData()
 	}
 
 	override func viewWillAppear(_ animated: Bool) {
@@ -38,8 +43,12 @@ class TaskViewerViewController: UITableViewController {
 
 			self.taskCategory = updatedData
 		}
+
 		taskCategory = displayModel.taskCategory
 		tasks = Array(taskCategory.tasks)
+		tasks.sort(by: {
+			$0.0.rawDate > $0.1.rawDate
+		})
 
 		tasks.forEach({
 			let model = TaskDisplayModel.createModel(tasks: $0)
