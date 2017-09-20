@@ -29,6 +29,9 @@ struct TaskManager {
 	}
 
 	static func addNewTask(category: TaskCategory, taskItem: TaskItem){
+
+		taskItem.parentId = category.id
+
 		let realm = try! Realm()
 		let categories = getAllTasks()
 

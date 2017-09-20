@@ -93,7 +93,7 @@ class GenericHeaderCell: UIView {
 		headerLbl.translatesAutoresizingMaskIntoConstraints = false
 		headerLbl.setContentHuggingPriority(251, for: .horizontal)
 		headerLbl.setContentHuggingPriority(251, for: .vertical)
-		headerLbl.font = UIFont(name: "HelveticaNeue-Medium", size: 17)
+		headerLbl.font = UIFont(name: "Avenir-Book", size: 18)
 		headerLbl.textColor = UIColor(white: 0.667, alpha: 1)
 
 		// Assemble View Hierarchy

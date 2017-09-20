@@ -15,42 +15,50 @@ class TableViewCellWithLeftButton: UITableViewCell {
 	var leftButton: UIButton!
 	var titleLbl: UILabel!
 
+	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+		super.init(style: style, reuseIdentifier: reuseIdentifier)
+		createCell()
+	}
+	
+	required init?(coder aDecoder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
 	func createCell(){
 
 		self.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 
-		let button = UIButton(type: .custom)
-		button.titleLabel?.lineBreakMode = .byTruncatingMiddle
-		button.isUserInteractionEnabled = false
-		button.isOpaque = false
-		button.translatesAutoresizingMaskIntoConstraints = false
-		button.setImage(UIImage(named: "groups"), for: .normal)
+		leftButton = UIButton(type: .system)
+		leftButton.titleLabel?.lineBreakMode = .byTruncatingMiddle
+		leftButton.isUserInteractionEnabled = false
+		leftButton.isOpaque = false
+		leftButton.translatesAutoresizingMaskIntoConstraints = false
+		leftButton.setImage(UIImage(named: "groups"), for: .normal)
 
-		let label = UILabel()
-		label.textAlignment = .natural
-		label.lineBreakMode = .byTruncatingTail
-		label.baselineAdjustment = .alignBaselines
-		label.text = "Personal"
-		label.contentMode = .left
-		label.isOpaque = false
-		label.translatesAutoresizingMaskIntoConstraints = false
-		label.setContentHuggingPriority(251, for: .horizontal)
-		label.setContentHuggingPriority(251, for: .vertical)
-		label.font = UIFont(name: "HelveticaNeue", size: 17)
-		label.textColor = UIColor(white: 0.333, alpha: 1)
+		titleLbl = UILabel()
+		titleLbl.textAlignment = .natural
+		titleLbl.lineBreakMode = .byTruncatingTail
+		titleLbl.baselineAdjustment = .alignBaselines
+		titleLbl.text = "Personal"
+		titleLbl.contentMode = .left
+		titleLbl.isOpaque = false
+		titleLbl.translatesAutoresizingMaskIntoConstraints = false
+		titleLbl.setContentHuggingPriority(251, for: .horizontal)
+		titleLbl.setContentHuggingPriority(251, for: .vertical)
+		titleLbl.font =  UIFont(name: "Avenir-Book", size: 18)
+		titleLbl.textColor = UIColor(white: 0.333, alpha: 1)
 
 		// Assemble View Hierarchy
-		self.contentView.addSubview(button)
-		self.contentView.addSubview(label)
+		self.contentView.addSubview(leftButton)
+		self.contentView.addSubview(titleLbl)
 
 		// Configure Constraints
-		button.widthAnchor.constraint(equalToConstant: 22.0).isActive = true
-		label.leadingAnchor.constraint(equalTo: button.trailingAnchor, constant: 15.0).isActive = true
-		button.topAnchor.constraint(equalTo: label.topAnchor).isActive = true
-		label.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor).isActive = true
-		button.centerYAnchor.constraint(equalTo: label.centerYAnchor).isActive = true
-		button.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
-		button.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor).isActive = true
+		leftButton.widthAnchor.constraint(equalToConstant: 22.0).isActive = true
+		leftButton.centerYAnchor.constraint(equalTo: titleLbl.centerYAnchor).isActive = true
+		leftButton.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+		leftButton.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+		leftButton.bottomAnchor.constraint(equalTo: titleLbl.bottomAnchor).isActive = true
+		titleLbl.leadingAnchor.constraint(equalTo: leftButton.trailingAnchor, constant: 8.0).isActive = true
+		self.trailingAnchor.constraint(equalTo: titleLbl.trailingAnchor, constant: 7.0).isActive = true
 
 		// Remaining Configuration
 		self.contentView.contentMode = .center

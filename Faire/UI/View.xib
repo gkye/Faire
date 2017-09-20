@@ -10,41 +10,41 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
         </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="0JS-St-5Bg">
-            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="37" id="Ldn-aW-ddO">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="37"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0JS-St-5Bg" id="xAg-Lf-Spb">
-                <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ldn-aW-ddO" id="mKI-qP-fnH">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="37"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwj-9d-rnu">
-                        <rect key="frame" x="8" y="8" width="22" height="21"/>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9N-ss-jca">
+                        <rect key="frame" x="8" y="5" width="22" height="26"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="22" id="q2g-8N-KOh"/>
+                            <constraint firstAttribute="width" constant="22" id="avW-To-q6W"/>
                         </constraints>
                         <state key="normal" image="groups"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgv-3C-pea">
-                        <rect key="frame" x="45" y="8" width="290" height="20"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lr9-AI-70p">
+                        <rect key="frame" x="38" y="6" width="290" height="25"/>
+                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Sgv-3C-pea" firstAttribute="leading" secondItem="Lwj-9d-rnu" secondAttribute="trailing" constant="15" id="3jX-xM-zkH"/>
-                    <constraint firstItem="Lwj-9d-rnu" firstAttribute="top" secondItem="Sgv-3C-pea" secondAttribute="top" id="Kx4-ab-TCo"/>
-                    <constraint firstItem="Sgv-3C-pea" firstAttribute="trailing" secondItem="xAg-Lf-Spb" secondAttribute="trailingMargin" id="NUn-fC-7bC"/>
-                    <constraint firstItem="Lwj-9d-rnu" firstAttribute="centerY" secondItem="Sgv-3C-pea" secondAttribute="centerY" id="Va2-mX-MUH"/>
-                    <constraint firstItem="Lwj-9d-rnu" firstAttribute="top" secondItem="xAg-Lf-Spb" secondAttribute="topMargin" id="ZvT-Ch-O1H"/>
-                    <constraint firstItem="Lwj-9d-rnu" firstAttribute="leading" secondItem="xAg-Lf-Spb" secondAttribute="leadingMargin" id="a8g-98-olm"/>
+                    <constraint firstItem="O9N-ss-jca" firstAttribute="centerY" secondItem="lr9-AI-70p" secondAttribute="centerY" id="EPc-2r-W9F"/>
+                    <constraint firstItem="O9N-ss-jca" firstAttribute="centerY" secondItem="mKI-qP-fnH" secondAttribute="centerY" id="I2q-go-i6O"/>
+                    <constraint firstItem="O9N-ss-jca" firstAttribute="leading" secondItem="mKI-qP-fnH" secondAttribute="leadingMargin" id="X0f-rk-mYh"/>
+                    <constraint firstItem="O9N-ss-jca" firstAttribute="bottom" secondItem="lr9-AI-70p" secondAttribute="bottom" id="ZEX-5s-4qC"/>
+                    <constraint firstItem="lr9-AI-70p" firstAttribute="leading" secondItem="O9N-ss-jca" secondAttribute="trailing" constant="8" symbolic="YES" id="dIP-fv-eSW"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="lr9-AI-70p" secondAttribute="trailing" constant="7" id="mAC-tP-nn4"/>
                 </constraints>
             </tableViewCellContentView>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>

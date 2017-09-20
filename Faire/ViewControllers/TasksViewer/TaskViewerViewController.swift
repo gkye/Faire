@@ -17,11 +17,17 @@ class TaskViewerViewController: UITableViewController {
 	var dataSource = [TaskDisplayModel]()
 
 	//Change navigation bar tint to white
-	
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		loadData()
+		let addTaskBtn = UIBarButtonItem(image: #imageLiteral(resourceName: "add"), style: .done, target: self, action: #selector(didTapAddNewTask))
+		addTaskBtn.tintColor = .black
+		navigationItem.rightBarButtonItem = addTaskBtn
+	}
 
+	override func viewWillAppear(_ animated: Bool) {
+		navigationController?.navigationBar.barTintColor = .white
 	}
 
 	func loadData(refresh: Bool = false){
@@ -42,30 +48,19 @@ class TaskViewerViewController: UITableViewController {
 		tableView.reloadData()
 	}
 
-	override func viewWillAppear(_ animated: Bool) {
-		navigationController?.navigationBar.barTintColor = .white
-	}
-
 	func didTapTaskCompleted(sender: AIFlatSwitch){
 		if let indexPath = sender.indexPath{
 			let item = tasks[indexPath.section - 1].taskItems[indexPath.row]
 			//Negate current completion status
 			TaskManager.toggleTaskCompletionStatus(task: item)
-
-
-//			let abc = taskCategory.tasks.first(where: {
-//				let index = $0.taskItems.index(where: {
-//					$0.id == item.id
-//				})
-//				if index != nil {
-//					$0.taskItems[index!] = item
-//					print($0.taskItems[index!])
-//				}
-//				return false
-//			})
-
 		}
+	}
 
+	func didTapAddNewTask(){
+		let storyB = UIStoryboard(name: "AddTask", bundle: nil)
+		let vc = storyB.instantiateViewController(withIdentifier: "AddTaskViewController") as! AddTaskViewController
+		vc.taskParent = taskCategory
+		navigationController?.pushViewController(vc, animated: true)
 
 	}
 }
