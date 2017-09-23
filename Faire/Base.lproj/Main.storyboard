@@ -152,6 +152,9 @@
                     <navigationItem key="navigationItem" id="jrU-8K-ceP">
                         <barButtonItem key="rightBarButtonItem" image="add" id="V1t-Eh-qMb">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="didTapAddNewCategoryBtn" destination="BYZ-38-t0r" id="rhr-23-cUc"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -298,11 +301,96 @@
             </objects>
             <point key="canvasLocation" x="116" y="776.76161919040487"/>
         </scene>
+        <!--Add Tasks Category View Controller-->
+        <scene sceneID="6uV-22-QTw">
+            <objects>
+                <viewController storyboardIdentifier="AddTasksCategoryViewController" id="Uys-OP-cYk" customClass="AddTasksCategoryViewController" customModule="Faire" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ume-wF-DLY"/>
+                        <viewControllerLayoutGuide type="bottom" id="pFq-gG-AYt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W0C-wk-Qtx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a new category to organize your tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXg-2R-E6C">
+                                <rect key="frame" x="16" y="49" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="DaH-B1-Nqb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Personal Tasks" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="LEx-k0-0Su">
+                                <rect key="frame" x="16" y="84" width="343" height="33"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="H9v-d6-5ua">
+                                <rect key="frame" x="0.0" y="125" width="375" height="542"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ecq-1O-UgF">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VGE-iy-7gq">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbC-Qj-XXD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" image="categoryIcon9"/>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="rbC-Qj-XXD" secondAttribute="bottom" id="SdW-5Z-05w"/>
+                                            <constraint firstItem="rbC-Qj-XXD" firstAttribute="leading" secondItem="VGE-iy-7gq" secondAttribute="leading" id="WNM-oH-io4"/>
+                                            <constraint firstAttribute="trailing" secondItem="rbC-Qj-XXD" secondAttribute="trailing" id="X6g-86-vgr"/>
+                                            <constraint firstItem="rbC-Qj-XXD" firstAttribute="top" secondItem="VGE-iy-7gq" secondAttribute="top" id="bOX-CA-aCJ"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H9v-d6-5ua" firstAttribute="top" secondItem="LEx-k0-0Su" secondAttribute="bottom" constant="8" symbolic="YES" id="5Sa-Vl-ZH4"/>
+                            <constraint firstItem="GXg-2R-E6C" firstAttribute="top" secondItem="ume-wF-DLY" secondAttribute="bottom" constant="29" id="7v3-UI-OF4"/>
+                            <constraint firstItem="LEx-k0-0Su" firstAttribute="centerX" secondItem="H9v-d6-5ua" secondAttribute="centerX" id="90F-x0-Dcy"/>
+                            <constraint firstItem="GXg-2R-E6C" firstAttribute="leading" secondItem="W0C-wk-Qtx" secondAttribute="leadingMargin" id="AuX-h9-AQk"/>
+                            <constraint firstItem="H9v-d6-5ua" firstAttribute="leading" secondItem="W0C-wk-Qtx" secondAttribute="leading" id="KbP-Bi-MaC"/>
+                            <constraint firstItem="H9v-d6-5ua" firstAttribute="bottom" secondItem="pFq-gG-AYt" secondAttribute="top" id="M3w-sj-e1O"/>
+                            <constraint firstAttribute="trailing" secondItem="H9v-d6-5ua" secondAttribute="trailing" id="UCi-hm-Iqt"/>
+                            <constraint firstItem="LEx-k0-0Su" firstAttribute="top" secondItem="GXg-2R-E6C" secondAttribute="bottom" constant="14" id="a56-Pt-Kw2"/>
+                            <constraint firstItem="GXg-2R-E6C" firstAttribute="leading" secondItem="LEx-k0-0Su" secondAttribute="leading" id="hI4-Er-du7"/>
+                            <constraint firstItem="GXg-2R-E6C" firstAttribute="trailing" secondItem="LEx-k0-0Su" secondAttribute="trailing" id="leJ-Ex-K4J"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="H9v-d6-5ua" id="4bc-cj-Yq7"/>
+                        <outlet property="textField" destination="LEx-k0-0Su" id="6l2-MQ-iAS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="os0-jD-eJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2167.1999999999998" y="777.66116941529242"/>
+        </scene>
     </scenes>
     <resources>
         <image name="add" width="22" height="22"/>
         <image name="attention" width="23" height="23"/>
         <image name="calendar" width="22" height="22"/>
+        <image name="categoryIcon9" width="20" height="20"/>
         <image name="more" width="23" height="6"/>
         <image name="playground" width="240" height="205"/>
         <image name="unchecked" width="80" height="81"/>

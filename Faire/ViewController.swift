@@ -45,7 +45,11 @@ class ViewController: UIViewController {
 		}
 		let items = TaskManager.getAllTasks()
 
-		print(items)
+	}
+
+	@IBAction func didTapAddNewCategoryBtn(){
+		let vc = storyboard?.instantiateViewController(withIdentifier: "AddTasksCategoryViewController") as! AddTasksCategoryViewController
+		navigationController?.pushViewController(vc, animated: true)
 	}
 
 }
