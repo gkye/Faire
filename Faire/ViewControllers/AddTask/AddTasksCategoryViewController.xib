@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="17A362a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+            <string>Avenir-Heavy</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTasksCategoryViewController" customModule="Faire" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="dzj-27-G1W" id="ekN-7C-cCz"/>
+                <outlet property="textField" destination="THE-Fc-iMc" id="5Pf-sY-c1h"/>
+                <outlet property="view" destination="iI6-0H-W4W" id="gft-q6-OF1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iI6-0H-W4W">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a new category to organize your tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dg0-U3-pkW">
+                    <rect key="frame" x="8" y="18" width="359" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="CsN-ym-eQC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Personal Tasks" textAlignment="natural" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="THE-Fc-iMc">
+                    <rect key="frame" x="8" y="53" width="359" height="33"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="24"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dzj-27-G1W">
+                    <rect key="frame" x="6" y="94" width="363" height="536"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KXK-9p-Hff">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Dg0-U3-pkW" firstAttribute="leading" secondItem="THE-Fc-iMc" secondAttribute="leading" id="7z4-C3-dD0"/>
+                <constraint firstItem="Dg0-U3-pkW" firstAttribute="top" secondItem="iI6-0H-W4W" secondAttribute="top" constant="18" id="KrT-FL-aEk"/>
+                <constraint firstItem="Dg0-U3-pkW" firstAttribute="trailing" secondItem="iI6-0H-W4W" secondAttribute="trailingMargin" id="NQi-Kh-hW3"/>
+                <constraint firstItem="THE-Fc-iMc" firstAttribute="centerX" secondItem="dzj-27-G1W" secondAttribute="centerX" id="Q5n-9q-L5T"/>
+                <constraint firstItem="Dg0-U3-pkW" firstAttribute="leading" secondItem="iI6-0H-W4W" secondAttribute="leadingMargin" id="akZ-va-zif"/>
+                <constraint firstItem="THE-Fc-iMc" firstAttribute="top" secondItem="Dg0-U3-pkW" secondAttribute="bottom" constant="14" id="cWf-e3-xKh"/>
+                <constraint firstItem="dzj-27-G1W" firstAttribute="top" secondItem="THE-Fc-iMc" secondAttribute="bottom" constant="8" symbolic="YES" id="e3e-Ff-LJa"/>
+                <constraint firstItem="Dg0-U3-pkW" firstAttribute="trailing" secondItem="THE-Fc-iMc" secondAttribute="trailing" id="izz-Sv-yCJ"/>
+                <constraint firstAttribute="bottom" secondItem="dzj-27-G1W" secondAttribute="bottom" constant="37" id="jQx-uK-xng"/>
+                <constraint firstItem="dzj-27-G1W" firstAttribute="leading" secondItem="iI6-0H-W4W" secondAttribute="leading" constant="6" id="trn-Ab-dc8"/>
+            </constraints>
+            <point key="canvasLocation" x="49.5" y="79.5"/>
+        </view>
+    </objects>
+</document>

@@ -68,3 +68,6 @@ class TableViewCellWithLeftButton: UITableViewCell {
 		self.contentView.autoresizingMask = []
 	}
 }
+
+
+

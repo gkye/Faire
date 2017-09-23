@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HorizontalDial.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>IBAnimatable.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>M13Checkbox.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,7 +57,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1FBA5B973E631142D1D8331645EF4E1F</key>
+		<key>0BA3D4FF8AB90A0D10BED005B6DBC512</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C6EF3D4286D1A5EAF91C75E430621D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>20A9DD9ABBF08BC57372A26C35327BF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,22 +82,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6C60FE6BD38F3B3737B9CEFD65206A23</key>
+		<key>593071ECB08818626CB5AE5B383D444B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7EC27DB775C90C471C5EB8DC23030758</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>89108C9E819AD6B2FC730D07F13B16EB</key>
+		<key>60FD61E64CD5CFF6BA0DBD27752D801D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>901F5ABD3AE746EEB1F4629AE9A7ABD9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9CC32972AE5A7DFE420C5EBEF6C398A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

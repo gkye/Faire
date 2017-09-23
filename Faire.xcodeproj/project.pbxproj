@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1804A7FC1F76C665002655BC /* GenericHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804A7FB1F76C665002655BC /* GenericHeaderCell.swift */; };
+		1804A7FE1F76C875002655BC /* M13Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804A7FD1F76C875002655BC /* M13Checkbox.swift */; };
 		1847F41B1F702CCB00E1A77C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1847F41A1F702CCB00E1A77C /* AppDelegate.swift */; };
 		1847F41D1F702CCB00E1A77C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1847F41C1F702CCB00E1A77C /* ViewController.swift */; };
 		1847F4201F702CCB00E1A77C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1847F41E1F702CCB00E1A77C /* Main.storyboard */; };
@@ -26,6 +28,10 @@
 		1847F4621F707F7800E1A77C /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1847F4611F707F7800E1A77C /* View.xib */; };
 		1847F4641F70AA0100E1A77C /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1847F4631F70AA0100E1A77C /* AddTaskViewController.swift */; };
 		1847F4661F70AC1C00E1A77C /* GenericTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1847F4651F70AC1C00E1A77C /* GenericTableViewCell.swift */; };
+		186E1FED1F7614BD007B6594 /* AddTasksCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186E1FEB1F7614BD007B6594 /* AddTasksCategoryViewController.xib */; };
+		186E1FF01F7616FC007B6594 /* DateAndTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186E1FEE1F7616FC007B6594 /* DateAndTimePickerView.swift */; };
+		186E1FF11F7616FC007B6594 /* DateAndTimePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186E1FEF1F7616FC007B6594 /* DateAndTimePickerView.xib */; };
+		186E1FF31F76198F007B6594 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186E1FF21F76198F007B6594 /* DesignableView.swift */; };
 		18C781B51F71F94C009AC853 /* AddTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C781B41F71F94C009AC853 /* AddTask.storyboard */; };
 		18C781B71F734F2A009AC853 /* AddTaskCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C781B61F734F2A009AC853 /* AddTaskCategoryViewController.swift */; };
 		2C8E9CA1CF5E4F2EE6C1C779 /* Pods_Faire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0E8F34B1FCD2998AA3ECF6 /* Pods_Faire.framework */; };
@@ -51,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1804A7FB1F76C665002655BC /* GenericHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericHeaderCell.swift; sourceTree = "<group>"; };
+		1804A7FD1F76C875002655BC /* M13Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = M13Checkbox.swift; sourceTree = "<group>"; };
 		1847F4171F702CCB00E1A77C /* Faire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Faire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1847F41A1F702CCB00E1A77C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1847F41C1F702CCB00E1A77C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +84,10 @@
 		1847F4611F707F7800E1A77C /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		1847F4631F70AA0100E1A77C /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTaskViewController.swift; path = Faire/ViewControllers/AddTask/AddTaskViewController.swift; sourceTree = SOURCE_ROOT; };
 		1847F4651F70AC1C00E1A77C /* GenericTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTableViewCell.swift; sourceTree = "<group>"; };
+		186E1FEB1F7614BD007B6594 /* AddTasksCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddTasksCategoryViewController.xib; sourceTree = "<group>"; };
+		186E1FEE1F7616FC007B6594 /* DateAndTimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateAndTimePickerView.swift; sourceTree = "<group>"; };
+		186E1FEF1F7616FC007B6594 /* DateAndTimePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateAndTimePickerView.xib; sourceTree = "<group>"; };
+		186E1FF21F76198F007B6594 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		18C781B41F71F94C009AC853 /* AddTask.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTask.storyboard; sourceTree = "<group>"; };
 		18C781B61F734F2A009AC853 /* AddTaskCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskCategoryViewController.swift; sourceTree = "<group>"; };
 		23DA755F38F73AF81EA74F70 /* Pods-Faire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Faire.release.xcconfig"; path = "Pods/Target Support Files/Pods-Faire/Pods-Faire.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,7 +205,11 @@
 				1847F4611F707F7800E1A77C /* View.xib */,
 				1847F4491F7030E400E1A77C /* TasksPreviewCell.swift */,
 				1847F45F1F706C9C00E1A77C /* AIFlatSwitch.swift */,
+				186E1FF21F76198F007B6594 /* DesignableView.swift */,
 				1847F4651F70AC1C00E1A77C /* GenericTableViewCell.swift */,
+				1804A7FB1F76C665002655BC /* GenericHeaderCell.swift */,
+				186E1FEE1F7616FC007B6594 /* DateAndTimePickerView.swift */,
+				186E1FEF1F7616FC007B6594 /* DateAndTimePickerView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -212,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				1847F44F1F70559600E1A77C /* Date.swift */,
+				1804A7FD1F76C875002655BC /* M13Checkbox.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -241,6 +258,7 @@
 				18C781B41F71F94C009AC853 /* AddTask.storyboard */,
 				1847F4631F70AA0100E1A77C /* AddTaskViewController.swift */,
 				18C781B61F734F2A009AC853 /* AddTaskCategoryViewController.swift */,
+				186E1FEB1F7614BD007B6594 /* AddTasksCategoryViewController.xib */,
 			);
 			path = AddTask;
 			sourceTree = "<group>";
@@ -268,6 +286,7 @@
 				1847F4151F702CCA00E1A77C /* Resources */,
 				0B1A5E619778104FAF09EDB6 /* [CP] Embed Pods Frameworks */,
 				18210DC60B44A073F234C0CA /* [CP] Copy Pods Resources */,
+				1804A7FA1F76B371002655BC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -377,9 +396,11 @@
 				1847F4251F702CCB00E1A77C /* LaunchScreen.storyboard in Resources */,
 				1847F4621F707F7800E1A77C /* View.xib in Resources */,
 				1847F45E1F7066D400E1A77C /* TaskViewer.storyboard in Resources */,
+				186E1FF11F7616FC007B6594 /* DateAndTimePickerView.xib in Resources */,
 				18C781B51F71F94C009AC853 /* AddTask.storyboard in Resources */,
 				1847F4221F702CCB00E1A77C /* Assets.xcassets in Resources */,
 				1847F4201F702CCB00E1A77C /* Main.storyboard in Resources */,
+				186E1FED1F7614BD007B6594 /* AddTasksCategoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +429,9 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Faire/Pods-Faire-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/HorizontalDial/HorizontalDial.framework",
 				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
+				"${BUILT_PRODUCTS_DIR}/M13Checkbox/M13Checkbox.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Timepiece/Timepiece.framework",
@@ -416,7 +439,9 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HorizontalDial.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M13Checkbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Timepiece.framework",
@@ -425,6 +450,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Faire/Pods-Faire-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		1804A7FA1F76B371002655BC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "KEYWORDS=\"REMINDME|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}/Faire\" \\( -name \"*.swift\" \\) -print0 | \\\nxargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | \\\nperl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"";
 		};
 		181359F33F1701A41EADE93C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -569,6 +607,10 @@
 				1847F4601F706C9C00E1A77C /* AIFlatSwitch.swift in Sources */,
 				1847F44D1F7034E400E1A77C /* Task.swift in Sources */,
 				1847F45A1F70651700E1A77C /* TaskViewerViewController.swift in Sources */,
+				186E1FF01F7616FC007B6594 /* DateAndTimePickerView.swift in Sources */,
+				1804A7FE1F76C875002655BC /* M13Checkbox.swift in Sources */,
+				1804A7FC1F76C665002655BC /* GenericHeaderCell.swift in Sources */,
+				186E1FF31F76198F007B6594 /* DesignableView.swift in Sources */,
 				1847F4541F70595100E1A77C /* DisplayModels.swift in Sources */,
 				1847F4501F70559600E1A77C /* Date.swift in Sources */,
 				1847F41D1F702CCB00E1A77C /* ViewController.swift in Sources */,

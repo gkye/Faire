@@ -91,6 +91,7 @@ extension TaskViewerViewController {
 		switch indexPath.section {
 		case 0:
 			let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath) as! TaskSummaryCell
+      cell.displayModel = displayModel
 			return cell
 
 		default:
@@ -111,8 +112,8 @@ extension TaskViewerViewController {
 	}
 
 	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		if indexPath.section > 0 { return 35 }
-		return 150
+		if indexPath.section > 0 { return 32 }
+		return 80
 	}
 
 	override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

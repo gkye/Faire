@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import M13Checkbox
 
 class TaskSummaryCell: UITableViewCell{
 
@@ -23,7 +24,8 @@ class TaskSummaryCell: UITableViewCell{
 	}
 
 	func updateUI(){
-		icon.setImage(displayModel.icon, for: .normal)
+    //REMINDME: change images
+		icon.setImage(#imageLiteral(resourceName: "categoryIcon9"), for: .normal)
 		tasksCountLbl.text = displayModel.totalTasksString
 		tasksCategoryLbl.text = displayModel.title
 	}
@@ -37,15 +39,17 @@ class TaskCell: UITableViewCell {
 		}
 	}
 
-	@IBOutlet var checkBox: AIFlatSwitch!
+	@IBOutlet var checkBox: CheckBoxButton!
 	@IBOutlet var titleLbl: UILabel!
 	@IBOutlet var secondaryActionBtn: UIButton!
 
 	override func awakeFromNib() {
+    checkBox.boxType = .square
 	}
 
-	@objc func didTapCheckBox(sender: AIFlatSwitch){
+	@IBAction func didTapCheckBox(sender: M13Checkbox){
 		print("update realm model")
+    taskCompleted()
 	}
 
 	func taskCompleted(){
@@ -55,54 +59,15 @@ class TaskCell: UITableViewCell {
 			attributeString.addAttribute(NSStrikethroughColorAttributeName, value: UIColor.black, range: NSMakeRange(0, attributeString.length))
 
 			titleLbl.attributedText = attributeString
-			checkBox.setSelected(true, animated: false)
+      checkBox.setCheckState(.checked, animated: true)
+//			checkBox.setSelected(true, animated: false)
 		}
 	}
 
 	func updateUI(){
 		titleLbl.text = model.name
-		checkBox.setSelected(model.isCompleted, animated: false)
+		checkBox.toggleCheckState(model.isCompleted)
 	}
 }
 
 
-class GenericHeaderCell: UIView {
-
-	var viewCreated: Bool = false
-
-	var headerLbl: UILabel!
-
-	override init(frame: CGRect) {
-		super.init(frame: frame)
-		createView()
-		layoutIfNeeded()
-	}
-	
-	required init?(coder aDecoder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
-	}
-
-	func createView(){
-		headerLbl = UILabel()
-		headerLbl.textAlignment = .natural
-		headerLbl.lineBreakMode = .byTruncatingTail
-		headerLbl.baselineAdjustment = .alignBaselines
-		headerLbl.text = "Label"
-		headerLbl.contentMode = .left
-		headerLbl.isOpaque = false
-		headerLbl.translatesAutoresizingMaskIntoConstraints = false
-		headerLbl.setContentHuggingPriority(251, for: .horizontal)
-		headerLbl.setContentHuggingPriority(251, for: .vertical)
-		headerLbl.font = UIFont(name: "Avenir-Book", size: 18)
-		headerLbl.textColor = UIColor(white: 0.667, alpha: 1)
-
-		// Assemble View Hierarchy
-		self.addSubview(headerLbl)
-
-		// Configure Constraints
-		headerLbl.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 23.0).isActive = true
-		headerLbl.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-		headerLbl.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-		viewCreated = true
-	}
-}

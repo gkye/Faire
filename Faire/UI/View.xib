@@ -18,16 +18,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="80" height="76"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9N-ss-jca">
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="categoryIcon2" translatesAutoresizingMaskIntoConstraints="NO" id="eGB-J0-js6">
                         <rect key="frame" x="0.0" y="0.0" width="80" height="76"/>
-                        <state key="normal" image="add"/>
-                    </button>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="O9N-ss-jca" firstAttribute="leading" secondItem="mKI-qP-fnH" secondAttribute="leading" id="5Xu-ze-kxJ"/>
-                    <constraint firstItem="O9N-ss-jca" firstAttribute="centerY" secondItem="mKI-qP-fnH" secondAttribute="centerY" id="FMU-E6-16A"/>
-                    <constraint firstItem="O9N-ss-jca" firstAttribute="top" secondItem="mKI-qP-fnH" secondAttribute="top" id="dFq-Rr-In4"/>
-                    <constraint firstAttribute="trailing" secondItem="O9N-ss-jca" secondAttribute="trailing" id="ng6-4H-dnS"/>
+                    <constraint firstItem="eGB-J0-js6" firstAttribute="top" secondItem="mKI-qP-fnH" secondAttribute="top" id="7fv-ch-5om"/>
+                    <constraint firstItem="eGB-J0-js6" firstAttribute="centerY" secondItem="mKI-qP-fnH" secondAttribute="centerY" id="ZoF-DK-JVU"/>
+                    <constraint firstItem="eGB-J0-js6" firstAttribute="leading" secondItem="mKI-qP-fnH" secondAttribute="leading" id="rLa-au-odw"/>
+                    <constraint firstAttribute="trailing" secondItem="eGB-J0-js6" secondAttribute="trailing" id="rtE-g5-0cg"/>
                 </constraints>
             </tableViewCellContentView>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -35,6 +34,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="add" width="22" height="22"/>
+        <image name="categoryIcon2" width="20" height="20"/>
     </resources>
 </document>
